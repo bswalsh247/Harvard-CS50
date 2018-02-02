@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Hasthtag Me!
+{% endblock %}
+
+{% block main %}
+    <h2>Powered by IBM Watson's AI to recommend your #'s and @'s for tweeting</h2>
+    <p>{{URL}}</p>
+
+    {% for item in results["keywords"] %}
+        {% set keyword_text = item["text"] %}
+            <p>#{{ keyword_text }}</p>
+    {% endfor %}
+
+    {% for item in results["entities"] %}
+        {% set entity_text = item["text"] %}
+            <p>@{{ entity_text }}</p>
+    {% endfor %}
+
+    <a href="https://twitter.com/intent/tweet"><img src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter40x40.png" border=0></a>
+
+{% endblock %}
+
+

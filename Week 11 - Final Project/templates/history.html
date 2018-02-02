@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Article URL</th>
+                <th>Date Analyzed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for url in history %}
+                <tr>
+                    <td>{{ url.article }}</td>
+                    <td>{{ url.timestamp }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+

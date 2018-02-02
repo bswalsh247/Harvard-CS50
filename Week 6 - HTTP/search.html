@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CS50 Search</title>
+    </head>
+    <body>
+        <h1>CS50 Search</h1>
+        <form action="https://www.google.com/search" method="get">
+            <input name="q" type="text"/>
+            <br/>
+            <input type="submit" value="CS50 Search"/>
+        </form>
+    </body>
+</html><!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CS50 Search</title>
+    </head>
+    <body>
+        <h1>CS50 Search</h1>
+        <form action="https://www.google.com/search" method="get">
+            <input name="q" type="text"/>
+            <br/>
+            <input type="submit" value="CS50 Search"/>
+        </form>
+    </body>
+</html>
+
+<!-- 
+We have a h1 heading, and then a form element.
+
+We’ll use "get" as the method for this one, since we know Google uses that for searching.
+
+We’ll add an input with the name q and a submit button.
+
+Now if we view this page and enter something like cats, our browser will know to create a URL that looks like https://www.google.com/search?q=cats and take us to it, from the form.
+
+But we haven’t created a back-end, or the server that actually reads the URLs it receives and generates the right response and sends it back. Next week, we’ll learn yet another language called Python, which will let us write our very own web server. 
+-->

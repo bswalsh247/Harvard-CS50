@@ -1,0 +1,30 @@
+<!-- display form to user that allows them to register and sign up for the site-->
+<!-- start by adding a template for the registration process. you can borrow from login.html b/c the forms look very similar-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <!--Log user in via POST as details will be sent in the HTTP messages body rather than the URL so other people
+    can't see their username and password in the URL-->
+    <form action="{{ url_for('register') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="Password" type="password"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="confirmation" placeholder="Confirmation" type="password"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Register</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}
+
